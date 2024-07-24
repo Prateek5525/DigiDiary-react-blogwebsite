@@ -1,0 +1,227 @@
+/* General styles and variables */
+:root {
+    --primary-color: #3498db; /* Primary blue */
+    --secondary-color: #2ecc71; /* Secondary green */
+    --accent-color: #e74c3c; /* Accent red */
+    --text-color: #333; /* Dark text */
+    --bg-color: #f5f5f5; /* Light background */
+    --border-color: #dcdcdc; /* Light border */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* General Navbar Styles */
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: var(--primary-color); /* Primary blue color from variables */
+    color: white;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove underline from logo link */
+}
+
+.logo {
+    height: 40px; /* Adjust the height as needed */
+    margin-right: 10px; /* Space between logo and brand name */
+}
+
+.nav-brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu-btn {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-btn:hover {
+    background-color: var(--secondary-color); /* Secondary green color from variables */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-btn {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Container for the search bar */
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 10px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 2px solid var(--border-color);
+    outline: none;
+    padding: 12px 20px;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Blog icon and title container */
+.blog-icon {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 15px;
+    align-items: center;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+}
+
+.blog-icon h3 {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Grid layout for blog posts */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 10px 20px 30px;
+}
+
+/* Blog post card */
+.blog {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: white;
+}
+
+.blog:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-title {
+    padding: 15px;
+}
+
+.blog-title h2 {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.blog-title p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+.post-link {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.post-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .search-container {
+        margin: 30px 20px;
+    }
+
+    .blog-icon {
+        margin: 0 40px 15px;
+        padding-bottom: 15px;
+    }
+
+    .posts-container {
+        margin: 20px 40px 30px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .search-container {
+        margin: 30px 0;
+    }
+
+    .blog-icon {
+        margin: 0 80px 15px;
+        padding-bottom: 15px;
+    }
+
+    .posts-container {
+        margin: 30px 80px;
+    }
+}
+
