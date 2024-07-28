@@ -1,4 +1,5 @@
 # DigiDiary
+## Internship Project: Unified Mentor
 
 **DigiDiary** is a modern and responsive blog platform built with Vite and React. This project allows users to view, create, and manage blog posts with a sleek and user-friendly interface.
 
