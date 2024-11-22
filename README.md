@@ -24,7 +24,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/<username>/DigiDiary.git
+    git clone https://github.com/Prateek5525/DigiDiary.git
     ```
 
 2. **Navigate to the project directory**:
@@ -58,7 +58,7 @@ To deploy the project to GitHub Pages:
     npm run deploy
     ```
 
-   The application will be available at `https://<username>.github.io/DigiDiary`.
+   The application will be available at `https://Prateek5525.github.io/DigiDiary`.
 
 ## Contributing
 
